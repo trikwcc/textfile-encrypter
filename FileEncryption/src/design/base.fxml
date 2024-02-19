@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="700.0" styleClass="bg-form" stylesheets="@../design/base.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Operations">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="48.0" prefHeight="242.0" prefWidth="670.0" styleClass="base" stylesheets="@../design/base.css">
+         <children>
+            <Label layoutX="245.0" layoutY="14.0" styleClass="text" stylesheets="@../design/base.css" text="Text Encripter" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="insert" layoutX="186.0" layoutY="67.0" prefHeight="39.0" prefWidth="320.0" promptText="Insert Text" styleClass="textfield" stylesheets="@../design/base.css" />
+            <TextField fx:id="recieve" layoutX="186.0" layoutY="182.0" prefHeight="37.0" prefWidth="320.0" promptText="Recieve Prompt" styleClass="textfield" stylesheets="@../design/base.css" />
+            <Button fx:id="submit" layoutX="546.0" layoutY="126.0" mnemonicParsing="false" onAction="#submit" styleClass="btn" stylesheets="@../design/base.css" text="Submit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="steps" layoutX="186.0" layoutY="126.0" onAction="#switchForm" prefHeight="39.0" prefWidth="320.0" promptText="Options" styleClass="btn" stylesheets="@../design/base.css" />
+            <Label layoutX="40.0" layoutY="74.0" styleClass="text" text="Text to Encrypt:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="genFiler" layoutX="522.0" layoutY="180.0" mnemonicParsing="false" onAction="#genFiler" styleClass="btn" stylesheets="@../design/base.css" text="Generate File">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="40.0" layoutY="135.0" styleClass="text" text="Steps:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="190.0" styleClass="text" text="Encrypted Text:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="573.0" layoutY="14.0" prefHeight="30.0" prefWidth="102.0" spacing="10.0">
+         <children>
+            <Circle fill="DODGERBLUE" opacity="0.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button fx:id="minimize" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="25.0" styleClass="minimize" stylesheets="@../design/base.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="MINUS" selectionStart="1" size="1.4em" wrappingWidth="13.19999885559082" />
+               </graphic></Button>
+            <Button fx:id="close" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="25.0" styleClass="close" stylesheets="@../design/base.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="CLOSE" size="1.4em" />
+               </graphic></Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
